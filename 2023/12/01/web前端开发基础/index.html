@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Chelsea">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/12/01/web前端开发基础/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="windows贴靠窗口：Win + 左&#x2F;右 &gt;  Win + 上&#x2F;下 &gt; 窗口可以变为 1&#x2F;4 大小放置在屏幕 4 个角落。切换窗口：Alt + Tab。撤销关闭浏览器页面：Ctrl+Shift+T任务视图：Win + Tab（松开键盘界面不会消失）。创建新的虚拟桌面：Win + Ctrl + D。关闭当前虚拟桌面：Win + Ctrl + F4。切换虚拟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web前端开发基础">
+<meta property="og:url" content="http://example.com/2023/12/01/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Chill">
+<meta property="og:description" content="windows贴靠窗口：Win + 左&#x2F;右 &gt;  Win + 上&#x2F;下 &gt; 窗口可以变为 1&#x2F;4 大小放置在屏幕 4 个角落。切换窗口：Alt + Tab。撤销关闭浏览器页面：Ctrl+Shift+T任务视图：Win + Tab（松开键盘界面不会消失）。创建新的虚拟桌面：Win + Ctrl + D。关闭当前虚拟桌面：Win + Ctrl + F4。切换虚拟">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://firstmeet-1322792896.cos.ap-shanghai.myqcloud.com/hui/web1.jpg">
+<meta property="article:published_time" content="2023-12-01T14:54:36.327Z">
+<meta property="article:modified_time" content="2023-12-01T14:54:36.327Z">
+<meta property="article:author" content="Chelsea">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://firstmeet-1322792896.cos.ap-shanghai.myqcloud.com/hui/web1.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Web前端开发基础 -
+        
+        Chill
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.6","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Chill
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Web前端开发基础</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://firstmeet-1322792896.cos.ap-shanghai.myqcloud.com/hui/avatar.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Chelsea</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-12-01 22:54:36</span>
+        <span class="mobile">2023-12-01 22:54:36</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-12-01 22:54:36</span>
+            <span class="mobile">2023-12-01 22:54:36</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/html/">html</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/css/">css</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/js/">js</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>贴靠窗口：Win + 左&#x2F;右 &gt;  Win + 上&#x2F;下 &gt; 窗口可以变为 1&#x2F;4 大小放置在屏幕 4 个角落。<br>切换窗口：Alt + Tab。<br>撤销关闭浏览器页面：Ctrl+Shift+T<br>任务视图：Win + Tab（松开键盘界面不会消失）。<br>创建新的虚拟桌面：Win + Ctrl + D。<br>关闭当前虚拟桌面：Win + Ctrl + F4。<br>切换虚拟桌面：Win + Ctrl + 左&#x2F;右。<br>关机快捷键：Alt+F4<br>显示桌面：Win+D<br> 打开“运行”对话框：Win + R<br>最小化所有窗口：Win + M<br>CMD常用的命令：（Windows系统不区分大小写）<br>盘符切换：盘符名称+冒号<br>回退到盘符目录：cd<br>查看当前路径下的内容：dir<br>进入单级目录：cd+目录<br>回退到上一级目录： cd..<br>进入多级目录：cd 目录1\目录2...<br>清屏：cls<br>退出命令提示符窗口：exit</p>
+<h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p>上传到github：npm run build</p>
+<h4 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a>快捷键：</h4><p>游标同时出现在多处：fn+alt<br>回退一个单位：shift+tab<br>vscode多页面切换：ctrl+tab</p>
+<h2 id="html-css"><a href="#html-css" class="headerlink" title="html&amp;css"></a>html&amp;css</h2><h4 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h4><p>html:<!--  文本  --><br>css：&#x2F;*  文本   *&#x2F;</p>
+<h4 id="html编号："><a href="#html编号：" class="headerlink" title="html编号："></a>html编号：</h4><h4 class="mix">aI混合编号：</h4>
+    <!--ol有序编号-->
+    <!-- start 表示从第几个数开始编号 -->
+    <ol type="a" start='2'>
+        <li>苹果</li>
+        <li type="I" value="5">香蕉</li>
+        <li>柠檬</li>
+    </ol>
+    <!-- ul无序编号 -->
+    <!-- type类型：disc（圆点）circle（圆圈）square（方块）-->
+    <ul type="square">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+<h4 id="css样式表引入方法："><a href="#css样式表引入方法：" class="headerlink" title="css样式表引入方法："></a>css样式表引入方法：</h4><ol>
+<li>内联样式表：</li>
+</ol>
+<p>&lt;标记 style &#x3D; “属性1：属性值1；属性2：属性值2；…”&gt;</p>
+<ol start="2">
+<li>内部样式表：</li>
+</ol>
+<style type = "text/css">
+选择器1{属性1：属性值1；属性2：属性值2；...}
+选择器2{属性1：属性值1；属性2：属性值2；...}
+</style>
+
+<ol start="3">
+<li>链接外部样式表:</li>
+</ol>
+<link href = "out.css" rel = "stylesheet" type = "text/css">
+
+<ol start="4">
+<li>导入外部样式表：</li>
+</ol>
+<style type = "text/css">
+@ import url("外部样式表文件名称")；
+选择器1{属性1：属性值1；属性2：属性值2；...}
+选择器2{属性1：属性值1；属性2：属性值2；...}
+</style>
+<h4 id="css语法："><a href="#css语法：" class="headerlink" title="css语法："></a>css语法：</h4><p>z-index：3；   &#x2F;* 层叠效果，数字越大越向上显示 <em>&#x2F;<br>opacity：1；  &#x2F;</em> 透明度效果，1-&gt;0表示从不透明到透明 *&#x2F;</p>
+<h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>JS中局部变量和全局变量会相互映射。<br>a++先取值后运算，++a先运算后取值。<br>一般JS代码后边要加分号，以下除外：<br>function test(){}<br>for(){}<br>if(){}<br>NaN不等于任何东西，包括自己</p>
+<p><strong>逻辑运算符：</strong>&amp;&amp;  ||   ！<br>&amp;&amp;（短路语句）：一假则假（遇到假就停）<br>||：一真则真（遇到真就停）<br>！：先变为布尔值再取反<br>undefined ,null ,NaN,””,0,false&#x3D;&gt;false</p>
+<p><strong>条件语句：</strong><br>if(){}<br>if(){}else if(){}else{}<br>switch(){<br>case “a”:<br>console.log();<br>}<br>break<br>continue</p>
+<p><strong>循环语句：</strong><br>for(var i&#x3D;0;i&lt;10;i++){}<br>while(){}<br>do{}while()<br><strong>for</strong>(property <strong>in</strong> document){}</p>
+<p><strong>消息对话框：</strong></p>
+<ul>
+<li>警告框  alert(message);</li>
+<li>确认框  confirm(message);</li>
+<li>提示框  prompt(text,defaultValue);</li>
+</ul>
+<p><strong>输入语句：</strong><br>var i &#x3D; parseInt(window.prompt(‘input’));<br>Alt+l Alt+O<br>数组：<br>var arr &#x3D; [1,3 ];<br>arr.length<br>  var b &#x3D; {<br>&#x2F;&#x2F;键  :  值<br>lastName:jin,<br>age:19,<br>}</p>
+<p><strong>常用系统函数：</strong></p>
+<ul>
+<li><p>eval函数  &#x2F;&#x2F;计算表达式的值</p>
+</li>
+<li><p>escape函数  &#x2F;&#x2F;对字符编码</p>
+</li>
+<li><p>unescape函数  &#x2F;&#x2F;对字符编码的函数进行解码</p>
+</li>
+<li><p>parseFloat&#x2F;parseInt函数  &#x2F;&#x2F;转换字符串</p>
+</li>
+<li><p>isNaN函数  &#x2F;&#x2F;测试字符串是否是非数字值</p>
+<p><strong>判断数据的类型：</strong>typeof()</p>
+</li>
+</ul>
+<p>typeof(null)&#x3D;&#x3D;&gt;”number”<br>typeof(a)&#x3D;&#x3D;&gt;”undefined”<br>typeof（）之后不会返回“null”结果，因为null属于“object”类型。</p>
+<p><strong>显示类型转换：</strong><br>Number(a);&#x2F;&#x2F;转换成数字<br>parseInt(a,b);&#x2F;&#x2F;将数字转换成整型(a是目标数字，以b为基底转化成十进制)<br>parseFloat(a);<br>String(a);<br>a.toString();&#x2F;&#x2F;null和undefined不可以用<br>Boolean(a);</p>
+<ul>
+<li>**split()**方法是切割成数组的形式</li>
+<li>**Join()**方法是将数组转换成字符串</li>
+<li>**pop()**方法删除数组的最后一个元素，把数组的长度减1，并且返回它被删除元素的值，如果数组变为空，则该方法不改变数组，返回undefine值。</li>
+<li>**shift()**方法用于把数组的第一个元素从其中删除，并返回被删除的值。如果数组是空的，shift()方法将不进行任何操作，返回undefined的值。</li>
+<li>**push()**方法向数组末尾添加一个或者多个元素，并返回新的长度。</li>
+<li>**unshift()**方法是向数组的开头添加一个或多个元素，并且返回新的长度。</li>
+<li><strong>reverse()方法</strong></li>
+<li><strong>slice()方法</strong>可从已有数组中返回选定的元素，返回一个新数组，包含从start到end（不包含该元素）的数组元素。（该方法不会改变原数组）</li>
+<li><strong>splice方法</strong>向或者从数组中添加或者删除项目，返回被删除的项目。（该方法会改变原数组）</li>
+</ul>
+<p><strong>隐式类型转换：</strong><br>isNaN(“ “);&#x2F;&#x2F;隐式调用Number<br>++ 、–、+&#x2F;-(正负)&#x2F;&#x2F;隐式调用Number<br>-、*、&#x2F;、% &#x2F;&#x2F;、&gt;、&lt;隐式调用Number</p>
+<ul>
+<li>&#x2F;&#x2F;隐式调用String<br>undefined &#x3D;&#x3D; null<br>NaN !&#x3D; NaN<br>绝对不等于：!&#x3D;&#x3D;   绝对等于：&#x3D;&#x3D;&#x3D;  &#x2F;&#x2F;不发生类型转换<br>函数声明：function a(x,y,…) {} &#x2F;&#x2F;x,y表参数</li>
+</ul>
+<p><strong>函数表达式：</strong><br>命名函数表达式：<br>var a &#x3D; function abc() {} &#x2F;&#x2F;忽略函数名abc，调用a<br>匿名函数表达式(默认)：<br>var a &#x3D; function () {}<br>  return的功能 ：终止函数；返回值<br>  一切声明的全局变量全是window的属性。<br>eg：var a &#x3D; 123; &#x3D;&#x3D;&gt;window.a &#x3D; 123;</p>
+<p><strong>特殊运算符：</strong></p>
+<ul>
+<li>逗号运算符：（a,b）计算机会先把括号里a，b进行运算，并返回b的结果。</li>
+<li>新建对象运算符：var object&#x3D;<strong>new</strong> Date();</li>
+<li>删除运算符：delete object;</li>
+<li>类型运算符：typeof(object);</li>
+</ul>
+<p>!!表示转换为布尔值，” “空格串默认为true，””空串默认为false。</p>
+<p><strong>js运行三部曲：</strong><br>语法分析，预编译，解释执行</p>
+<p><strong>预编译：</strong><br>函数声明整体提升，变量只有声明提升。<br>执行期上下文：AO&amp;GO<br>执行期上下文的集合是作用域链<br>函数执行时产生一个AO放到作用域链的最顶端，执行结束时自动结束此AO，等待下次执行。<br>操作步骤：<br>①从上到下依次找出var定义的变量和function定义的变量，分别写入AO和GO；<br>②默认赋为undefined，从上到下依次赋各自的值。</p>
+<p><strong>闭包：</strong>当内部函数被保存到外部时，将会生成闭包。闭包会导致原有的作用域链不释放，造成内存泄露（剩下的部分变少）。<br><strong>闭包的作用：</strong><br>立即执行函数：<br>(function(){});   或   (function(){})();<br>只有表达式才能被执行；<br>未经声明的变量只有放在typeof下面不会报错，返回undefined（String类型）；</p>
+<p><strong>对象的创建方法：</strong><br>1.var obj &#x3D; {}      对象字面量&#x2F;对象直接量<br>2.构造函数<br>1）系统自带的构造函数   new Object() Array()<br>var obj &#x3D; new Object();<br>2）自定义<br>var obj &#x3D; {};</p>
+<p><strong>对象属性的增删改查</strong><br>var a &#x3D; {<br>name:”MrDeng”,<br>age:20,<br>sex:”male”,<br>smoke:function(){<br>console.log(“I am smoking !”);<br>this.health –;<br>},<br>drink:function(){<br>console.log(“I am drink !”);<br>this.health ++;<br>}<br>}<br>MrDeng.sex &#x3D;”female”;  &#x2F;&#x2F;改<br>delete MrDeng.sex;  &#x2F;&#x2F;删</p>
+<p><strong>构造函数new内部原理：</strong><br>1）在函数体最前面隐式的加上this &#x3D; {}<br>2）执行this.xxx &#x3D; xxx<br>3）隐式的返回this<br>如果用new构造函数可以不被新return的内容干扰依旧返回this的内容<br>  charCodeAt()方法可以返回指定位置的字符的Unicode编码。<br>语法：stringObject.charCodeAt(index);</p>
+<p><strong>原型</strong>:函数的一个属性，定义了构造函数制造出对象的公共祖先。原型也是对象。<br>a.prototype.c  &#x2F;&#x2F;对原型里的属性进行修改<br>a.constructor  &#x2F;&#x2F;查看a对象的构造函数（可修改）<br>  a.call&#x2F;apply  &#x3D;&gt; 改变this的指向<br>区别：传参列表不同。<br>call 需要把实参按照形参的个数传进去；<br>apply 需要传一个arguments数组。<br>** try…catch:**<br>try内部只要有一个报错，try内部的后续命令不会执行，但是外部的命令会正常执行。<br>es5标准模式：es3.0和es5.0产生冲突的部分就用es5.0，否则用es3.0<br>“use strict”;   &#x2F;&#x2F;放在逻辑最顶端  &#x2F;&#x2F;启动es5.0严格模式<br>不支持with，arguments，callee，function，caller；变量赋值前必须声明；局部this必须被赋值；拒绝重复属性和参数。<br>两种用法：<br>1.全局严格模式<br>2.局部函数内严格模式</p>
+<h4 id="JavaScript的组成："><a href="#JavaScript的组成：" class="headerlink" title="JavaScript的组成："></a>JavaScript的组成：</h4><ul>
+<li>核心（ECMAScript）</li>
+<li>文档对象模型（DOM）</li>
+</ul>
+<p>结构树：<br><img src='https://firstmeet-1322792896.cos.ap-shanghai.myqcloud.com/hui/web1.jpg'></p>
+<ul>
+<li>浏览器对象模型（BOM）<br>~定义了JavaScript可以进行操作的浏览器的各个功能部件的接口，提供访问文档各个功能部件的途径及操作方法。（常见的BOM对象有Windows对象、Navigater对象、Screen对象、History对象、Location对象等。还包括定时器，系统对话框alert等。）</li>
+</ul>
+<h4 id="js注释："><a href="#js注释：" class="headerlink" title="js注释："></a>js注释：</h4><p>&#x2F;&#x2F; 或 &#x2F;*   文本  *&#x2F;</p>
+<h4 id="JavaScript事件"><a href="#JavaScript事件" class="headerlink" title="JavaScript事件"></a>JavaScript事件</h4><ul>
+<li>事件：1）鼠标事件click…   2）键盘事件keydown、keyup…  3）HTML事件load、blur…  4）突变事件…</li>
+<li>事件句柄：命名原则是在事件名称前加on</li>
+<li>事件处理：静态指定、动态绑定、特定对象的特定事件处理</li>
+<li>表单事件：<ol>
+<li>失去&#x2F;获得焦点事件（表单中的元素获得焦点触发focus，失去焦点触发blur）   </li>
+<li>表单提交&#x2F;重置事件（触发Submit&#x2F;Reset事件，调用“return submitTest（)”&#x2F;“resetTest()”，获取输入框内容，弹出提示信息并返回false&#x2F;）</li>
+<li>表单元素的改变事件 （select下拉选项改变触发Change改变事件</li>
+<li>鼠标点击事件（onclick单击、ondblclick双击）  </li>
+<li>鼠标移动事件（进入页面元素mouseOver事件、退出mouseOut事件、鼠标按键检测mouseDown、mouseUp…）</li>
+<li>窗口事件（浏览器窗口在加载或卸载页面时触发的事件load&#x2F;unload，setTimeout（）设定等候时间）</li>
+<li>键盘事件（keydown()，keypress()，keyup()事件…）</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Web前端开发基础</li>
+        <li><strong>Author:</strong> Chelsea</li>
+        <li><strong>Created at
+                :</strong> 2023-12-01 22:54:36</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-12-01 22:54:36
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/12/01/web前端开发基础/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/html/">#html</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/css/">#css</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/js/">#js</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/12/01/SQL/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">SQL基础</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/12/01/Skincare/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">护肤小知识</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail']
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Web前端开发基础</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows"><span class="nav-text">windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode"><span class="nav-text">vscode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-css"><span class="nav-text">html&amp;css</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js"><span class="nav-text">js</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Chelsea</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.5.6</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
